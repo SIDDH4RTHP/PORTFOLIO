@@ -1,184 +1,63 @@
-<!DOCTYPE html>
-<html lang="en">
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Siddharth Kumar Soni</title>
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
-    <link rel="stylesheet" href="style.css">
-</head>
+    padding: 24px 8%;
 
-<body>
+    background-color: rgba(240, 238, 230, 0.92);
+    backdrop-filter: blur(10px);
 
-    <nav>
-        <div class="logo">Siddharth</div>
+    border-bottom: 1px solid rgba(34, 34, 34, 0.12);
+}
 
-        <div class="nav-links">
-            <a href="#about">About</a>
-            <a href="#skills">Skills</a>
-            <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
-        </div>
-    </nav>
-    <section class="hero">
+.logo {
+    font-size: 25px;
+    font-weight: 600;
+    letter-spacing: -0.8px;
+}
 
-    <div class="hero-content">
-        <p class="intro">Hi, I'm</p>
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
 
-        <h1>Siddharth Kumar Soni</h1>
+.nav-links a {
+    position: relative;
 
-        <h2>CS & AI Student</h2>
+    text-decoration: none;
+    color: #222;
 
-        <p class="hero-text">
-            Exploring technology, learning new concepts,
-            and building my skills in computer science.
-        </p>
+    font-size: 15px;
+    font-weight: 500;
 
-        <a href="#projects" class="hero-button">View My Work</a>
-    </div>
+    transition: color 0.3s ease;
+}
 
-</section>
-<section id="about" class="about">
+.nav-links a::after {
+    content: "";
 
-    <div class="section-title">
-        <p>About Me</p>
-        <h2>Who I Am</h2>
-    </div>
+    position: absolute;
+    left: 0;
+    bottom: -7px;
 
-    <div class="about-content">
-        <p>
-            Hi everyone, I'm Siddharth Kumar Soni.
-        </p>
+    width: 0;
+    height: 1px;
 
-        <p>
-            I'm currently pursuing a B.Tech in Computer Science and
-            Artificial Intelligence from Scaler School of Technology,
-            while simultaneously pursuing a BS degree from IIT Madras.
-        </p>
+    background-color: #222;
 
-        <p>
-            I'm passionate about exploring different fields within
-            technology, which is one of the main reasons I chose this
-            parallel learning path. I enjoy learning new concepts and
-            building my skills across different areas of computer science.
-        </p>
+    transition: width 0.3s ease;
+}
 
-        <p>
-            I have experience with Java, Python, HTML, and CSS, and I'm
-            continuously expanding my technical knowledge through projects
-            and hands-on learning.
-        </p>
+.nav-links a:hover {
+    color: #666;
+}
 
-        <p>
-            I'm always excited to learn, collaborate, and explore new
-            opportunities in the tech world.
-        </p>
-    </div>
-
-</section>
-<section id="skills" class="skills">
-
-    <div class="section-title">
-        <p>My Skills</p>
-        <h2>Technologies I Use</h2>
-    </div>
-
-    <div class="skills-list">
-        <div class="skill">Java</div>
-        <div class="skill">Python</div>
-        <div class="skill">HTML</div>
-        <div class="skill">CSS</div>
-        <div class="skill">Linux</div>
-        <div class="skill">Git</div>
-        <div class="skill">GitHub</div>
-    </div>
-
-</section>
-<section id="projects" class="projects">
-
-    <div class="section-title">
-        <p>My Work</p>
-        <h2>Projects</h2>
-    </div>
-
-    <div class="projects-list">
-
-        <div class="project-card">
-            <h3>NextCamp</h3>
-
-            <p>
-                A project developed during a college hackathon.
-            </p>
-
-            <a href="#" class="project-link">View Project</a>
-        </div>
-
-        <div class="project-card">
-            <h3>Personal Portfolio</h3>
-
-            <p>
-                My personal portfolio website built using HTML and CSS.
-            </p>
-
-            <a href="#" class="project-link">View Project</a>
-        </div>
-
-    </div>
-
-</section>
-<section id="education" class="education">
-
-    <div class="section-title">
-        <p>My Education</p>
-        <h2>Education</h2>
-    </div>
-
-    <div class="education-list">
-
-        <div class="education-card">
-            <h3>Scaler School of Technology</h3>
-            <p>Computer Science and Artificial Intelligence</p>
-        </div>
-
-        <div class="education-card">
-            <h3>IIT Madras</h3>
-            <p>BS Degree</p>
-        </div>
-
-    </div>
-
-</section>
-<section id="contact" class="contact">
-
-    <div class="section-title">
-        <p>Get In Touch</p>
-        <h2>Contact Me</h2>
-    </div>
-
-    <div class="contact-content">
-        <p>
-            I'm always open to learning, collaborating, and exploring
-            new opportunities.
-        </p>
-
-        <a href="mailto:workwithsiddh4rth@gmail.com" class="contact-button">
-            Send Me an Email
-        </a>
-        <div class="contact-links">
-
-    <a href="YOUR_GITHUB_LINK" target="_blank">GitHub</a>
-
-    <a href="YOUR_LINKEDIN_LINK" target="_blank">LinkedIn</a>
-
-</div>
-    </div>
-
-</section>
-<footer>
-    <p>© 2026 Siddharth Kumar Soni. All rights reserved.</p>
-</footer>
-
-</body>
-
-</html>
+.nav-links a:hover::after {
+    width: 100%;
+}
